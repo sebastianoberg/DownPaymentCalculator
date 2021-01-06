@@ -43,10 +43,5 @@ namespace DownPaymentCalculator.Contracts
         /// Purchase price - Köpeskilling
         /// </summary>
         public int PurchasePrice { get; set; }
-
-        /// <summary>
-        /// -----
-        /// </summary>
-        public int City { get; set; }
     }
 }
