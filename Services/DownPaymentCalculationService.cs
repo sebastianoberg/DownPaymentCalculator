@@ -8,11 +8,13 @@ namespace DownPaymentCalculator.Services
     {
         public DownPaymentResponse CalculateTotalDownPayment(DownPaymentRequest request)
         {
-            var newMortgageBond = request.DownPaymentSummary.PurchasePrice * 0.85;
+            var percentageCashContributionShare = request.DownPaymentSummary.CashContributionShare / 100;
+            var cashContribution = request.DownPaymentSummary.PurchasePrice * percentageCashContributionShare;
+            var loanAmount = request.DownPaymentSummary.PurchasePrice - cashContribution;
 
-            var mortgageBondCost = CalculationUtils.calculateMortgageBondTax(request.DownPaymentSummary.ExistingMortgageBond, Convert.ToInt32(newMortgageBond));
+            var mortgageBondCost = CalculationUtils.calculateMortgageBondTax(request.DownPaymentSummary.ExistingMortgageBond, Convert.ToInt32(loanAmount));
             var titleDeedCost = CalculationUtils.calculateTitleDeed(request.DownPaymentSummary.PurchasePrice);
-            var totalDownPaymentNeeded = titleDeedCost + mortgageBondCost + request.DownPaymentSummary.CashContribution;
+            var totalDownPaymentNeeded = titleDeedCost + mortgageBondCost + cashContribution;
 
             return new DownPaymentResponse(mortgageBondCost, titleDeedCost, totalDownPaymentNeeded);
         }

@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using DownPaymentCalculator.Contracts;
 using DownPaymentCalculator.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;

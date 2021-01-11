@@ -24,17 +24,17 @@ namespace DownPaymentCalculator.Contracts
         /// <summary>Initializes a new instance of the <see cref="DownPaymentSummary"/> class.</summary>
         /// <param name="existingMortgageBond">Existing mortgage bond</param>
         /// <param name="purchasePrice">House price</param>
-        /// <param name="cashContribution">Cash contribution</param>
+        /// <param name="cashContributionShare">Cash contribution in percentage</param>
         [JsonConstructor]
         public DownPaymentSummary(
             int existingMortgageBond,
             int purchasePrice,
-            int cashContribution
+            double cashContributionShare
             )
         {
             ExistingMortgageBond = existingMortgageBond;
             PurchasePrice = purchasePrice;
-            CashContribution = cashContribution;
+            CashContributionShare = cashContributionShare;
         }
 
         /// <summary>
@@ -48,8 +48,8 @@ namespace DownPaymentCalculator.Contracts
         public int PurchasePrice { get; set; }
 
         /// <summary>
-        /// Cash Contribution - Kontantinsats
+        /// Cash Contribution share in percentage - Kontantinsats
         /// </summary>
-        public int CashContribution { get; set; }
+        public double CashContributionShare { get; set; }
     }
 }

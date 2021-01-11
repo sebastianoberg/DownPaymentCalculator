@@ -1,0 +1,18 @@
+.column {
+  text-align: left;
+  float: left;
+  width: 33.1%;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.outputLabel {
+    color:#fa5594!important;
+    font-family:Helvetica,Arial,sans-serif;
+}
+
+.row {
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

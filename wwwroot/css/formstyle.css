@@ -1,0 +1,48 @@
+input[type='submit'], button, [aria-label] {
+  width: 100%;
+  background-color: #ff4289;
+  color: white;
+  padding: 4px 2px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=number], select {
+  width: 100%;
+  padding: 2px 2px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+}
+
+#input-label {
+    color:#fa5594!important;
+    font-family:Helvetica,Arial,sans-serif;
+}
+
+.sliderValue {
+    color:#fa5594!important;
+    font-family:Helvetica,Arial,sans-serif;
+}
+
+.topcontainer {
+    padding: 56px;
+    border-radius: 4px;
+}
+
+.divform {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.qtrial-gradient{
+    color:#000!important;
+    background-image: linear-gradient(to right, #ff4289 , #d40077)!important
+}
+
+h1,h2,h3,h4,h5,h6{font-family:Helvetica,Arial,sans-serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}

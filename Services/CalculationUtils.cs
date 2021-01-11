@@ -14,5 +14,15 @@ namespace DownPaymentCalculator.Services
         {
             return 0.02 * (newMortgageBond - existingMortgageBond) + 375;
         }
+
+        public static double calculateCashContribution(int housePrice, double cashContributionPercentage)
+        {
+            return housePrice * cashContributionPercentage;
+        }
+
+        public static double convertCashContributionShareToPercentage(double cashContributionShare)
+        {
+            return cashContributionShare * 100;
+        }
     }
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DownPaymentCalculator</title>
+    <link rel="stylesheet" href="css/formstyle.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/resultForm.css">
+</head>
+
+<body>
+    <div class="qtrial-gradient b"></div>
+
+    <div class="topcontainer qtrial-gradient">
+    </div>
+
+    <div class="divform">
+        <h2>Ange beloppen och klicka på "Beräkna"</h2>
+        <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+            <label id="input-label"><b>Befintliga pantbrev</b></label><br><br>
+            <input type="number" id="existingMortgageBond" placeholder="Ange Befintliga pantbrev här"><br><br>
+
+            <label id="input-label"><b>Husets slutpris</b></label><br><br>
+            <input type="number" id="purchasePrice" placeholder="Husets pris"><br><br>
+
+            <label id="input-label"><b>Dra för att ange kontantinsats, angiven kontantinsats:</b></label>
+            <span class="sliderValue" id="demo"></span><br><br>
+
+            <input type="range" min="1" max="100" value="15" class="slider" id="cashContribution"
+                data-show-value="true"><br><br>
+
+            <input type="submit" value="Beräkna">
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="column" style="background-color:#f2f2f2;">
+            <label><b>Kostnad för pantbrev:</b></label>
+            <span class="outputLabel" id="mortgageBondCost"></span>
+        </div>
+        <div class="column" style="background-color:#ccc;">
+            <label><b>Kostnad för lagfart:</b></label>
+            <span class="outputLabel" id="titleDeedCost"></span>
+        </div>
+        <div class="column" style="background-color:#f2f2f2;">
+            <label><b>Total kostnad:</b></label>
+            <span class="outputLabel" id="totalDownPaymentNeeded"></span>
+        </div>
+    </div>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script src="js/slider.js" asp-append-version="true"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>
